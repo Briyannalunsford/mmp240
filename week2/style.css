@@ -1,7 +1,32 @@
+
+*{
+    margin:0;
+    padding:0;
+    border:none;
+}
+
 .container{  
-    width: 1140px;
+    max-width: 1140px;
+    border: solid 3px #999;
+    padding:32px;
+    padding-top:16px;
+    margin:32px;
+
 }
 
 .orange-color{
     color:orange;
+}
+
+.fluid-image{
+    width:100%;
+}
+
+p{
+    margin-bottom:1em;
+    margin-top:1em;
+}
+
+h3{
+    margin-top:1em;
 }
