@@ -15,7 +15,7 @@ body{
     max-width: 1140px;
     padding:16px;
     padding-top:16px;
-
+    position:relative; /* acts as a ref point to positioned elements inside it */
 }
 
 /* Header and Nav Styles */
@@ -43,23 +43,33 @@ nav{
 }
     
 .main-menu ul{
-    /*display:none;*/
+/*    display:none;*/
     list-style-type: none;
     border: solid 1px #333;
+    position:absolute;
+    right:16px;
+    background-color: #fff;
+    width:200px;
 
     
 }
 .main-menu li{
     height:36px;
     padding-top:6px;
-    margin-bottom: 6px;
     border-bottom: solid 1px #333;
     padding-left:1em;
+    background-color: #9be7ff;
+
 }
 
-.main-menu li:last-child{
+.main-menu li:last-child{ /* targets last list item */
    border-bottom: none;
     margin-bottom:0;
+}
+
+.main-menu a{
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 
@@ -94,7 +104,47 @@ h3{
 }
 
 
+/* ***** Desktop styles  **** */
 
+@media(min-width: 768px){
+    
+     header{
+        width:30%;
+    }   
+
+     nav{
+        width:60%;
+    }   
+
+    .menu-button{
+        display: none;
+    }
+
+    .main-menu ul{
+        display:block;
+        border: none;
+        position:static;
+        width:100%;
+        text-align: right;
+        }
+
+    .main-menu li{
+        height:auto;
+        padding-top:5px;
+        padding-bottom:5px;
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-left:0;
+        display: inline-block;
+        background-color: #9be7ff;
+        width:100px;
+        margin-left:1px;
+        margin-right:0;
+        text-align: center;
+        }
+}
+    
+    
 
 
 
